@@ -1,6 +1,6 @@
 # VFP-Editors
 
-I wrote several tools for editing VFP forms, classes, menus, tables, and program (prg) files.  Also, I wrote a global search tool, comparison tool, and a library tool. These all are APP files that run inside the VFP design-time environment. To integrate them I wrote a replacement for the PJX file and associated project manager and a toolbar for using in VFP Design-Time environment to make it easier to access these tools. 
+I wrote several tools for editing VFP forms, classes, menus, tables, and program (prg) files.  Also, I wrote a global search tool, comparison tool, a table browse tool, and a library tool. These all are APP files that run inside the VFP design-time environment. To integrate them I wrote a replacement for the PJX file and associated project manager and a toolbar for using in VFP Design-Time environment to make it easier to access these tools. 
 
 I have added to this repository each of the zip files for each tool-set.  The support zip is required for all tools -- it contains the Active-X components (two) that must be manually registered with REGEDIT32.EXE and a custom Arial TrueType font.  The Active-X components are an Editor component and a spreadsheet grid component.
 
