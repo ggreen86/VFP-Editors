@@ -59,4 +59,6 @@ Form (SCX) Editor (property edit mode):
 Menu (MNU) Editor:
 ![2021-04-12_16-11-31](https://user-images.githubusercontent.com/28057069/114871900-c723d880-9dc7-11eb-95b9-aef91733cfe0.png)
 
+Comparison Tool (showing a comparison of SCX forms):
+![2021-04-15_9-25-31](https://user-images.githubusercontent.com/28057069/114876921-cb9ec000-9dcc-11eb-8a0f-d25aff375856.png)
 
