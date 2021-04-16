@@ -59,6 +59,9 @@ Form (SCX) Editor (property edit mode):
 Menu (MNU) Editor:
 ![2021-04-12_16-11-31](https://user-images.githubusercontent.com/28057069/114871900-c723d880-9dc7-11eb-95b9-aef91733cfe0.png)
 
+Table Browser (showing multi-tab selection for table and selection of fields to be included in display with memo field contents displayed in editboxes):
+![2021-04-16_13-44-51](https://user-images.githubusercontent.com/28057069/115063874-29f59c80-9eba-11eb-9509-8d3b81e950b8.png)
+
 Comparison Tool (showing a comparison of SCX forms):
 ![2021-04-15_9-25-31](https://user-images.githubusercontent.com/28057069/114876921-cb9ec000-9dcc-11eb-8a0f-d25aff375856.png)
 
