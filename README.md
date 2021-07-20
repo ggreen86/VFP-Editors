@@ -65,3 +65,43 @@ Table Browser (showing multi-tab selection for table and selection of fields to 
 Comparison Tool (showing a comparison of SCX forms):
 ![2021-04-15_9-25-31](https://user-images.githubusercontent.com/28057069/114876921-cb9ec000-9dcc-11eb-8a0f-d25aff375856.png)
 
+<b>Installation Guidelines</b>
+
+The tools are already compiled to APP files and are ready to be used.  They depend on the following Active-X components:
+
+<ul>
+<li>cmax40.dll - the main editor component</li>
+<li>bbListView.ocx - listview component</li>
+<li>ax_ug.ocx - excel like grid component that supports multiple sheets</li>
+</ul>
+
+The following components are only licensed for use with these tools:
+
+<ul>
+<li>cmax40.dll (CodeMax)</li>
+<li>bblistview.ocx (bbListView)</li>
+</ul>
+
+Neither of the two above components are available any longer for license purchase; however, my license allows me to distribute with these tools.  CodeMax v2.x source code was released and can be found on the internet; the version included here is v3.x with modifications to the source code by me for faster language parsing.
+
+CodeMax requires MSXML 4.0 min and has a dependency to the MS Visual C++ redistributable package; bbListView has a dependency to MS Visual C++ redistributable package as well.  Both redistributables are included in the support zip.
+
+ax_ug.ocx is the Ultimate Grid (available as open-source on CodeProject website) packaged as an activex.  Look for documentation on it on CodeProject; note that the method and event names are not exactly the same.  You can use the object browser in VFP to extract the names.  This also requires the MS Visual C++ redistributable package.
+
+The various versions of the MS Visual C++ redistributable packages are for each of the different active-xs.  The active-x components will require manually registering them via Regsvr32.exe.  First install the MS Visual C++ redistributable packages and the MSXML support (if not already installed).  Then register the components.
+
+There are other ActiveX components that are used that should be available with VFP installed.  These include the MS Image control, MS Image Combobox, MS RichText Editor, MS Treeview, and MS ListView controls.
+
+The custom GKKArial.ttf file is used in the editors in the search/find textboxes.  It has a special space character so as to preserve spaces entered for searching (so these are not trimmed via ALLTRIM() command).  The GKKConvert.fll file is another support file - place in same folder as the APP files; it is used by the Struct.vcx class (can be found on internet).
+
+You can look at the various .ISS files which are INNO Script files for the INNO Setup Installer for more information.
+
+<b>Usage Tips</b>
+
+The project manager replacement was written to allow for opening forms, visual classes, programs using the tools above, as well as, the normal built-in VFP editors.  The first time you try to open a form, visual class, or program, it will prompt you for the app file location.  Once located, it is stored.
+
+The visual class editor and form editor do not support deleting of objects nor the addition of objects.  I began coding a replacement for the visual layout editor but it has not been finished -- it will only display.  I use the standard VFP editors to do the layout and then switch to my editors for the coding.  
+
+These editors do support the adding/editing/deleting of properties.  The property display/sheet sheet in these two editors is the ax_ug.ocx component which gives very good visual display of the properties and the setting of values.
+
+Alot of the functionality of Thor tool has also been incorporated into these editors.  Having the source code you are free to add more as needed.
