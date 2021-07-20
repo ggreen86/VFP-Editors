@@ -100,8 +100,15 @@ You can look at the various .ISS files which are INNO Script files for the INNO 
 
 The project manager replacement was written to allow for opening forms, visual classes, programs using the tools above, as well as, the normal built-in VFP editors.  The first time you try to open a form, visual class, or program, it will prompt you for the app file location.  Once located, it is stored.
 
-The visual class editor and form editor do not support deleting of objects nor the addition of objects.  I began coding a replacement for the visual layout editor but it has not been finished -- it will only display.  I use the standard VFP editors to do the layout and then switch to my editors for the coding.  
-
 These editors do support the adding/editing/deleting of properties.  The property display/sheet sheet in these two editors is the ax_ug.ocx component which gives very good visual display of the properties and the setting of values.
 
 Alot of the functionality of Thor tool has also been incorporated into these editors.  Having the source code you are free to add more as needed.
+
+
+<b>Known Issues</b>
+
+The visual class editor and form editor do not support deleting of objects nor the addition of objects.  I began coding a replacement for the visual layout editor but it has not been finished -- it will only display.  I use the standard VFP editors to do the layout and then switch to my editors for the coding.
+
+The use of the Code Peek feature will not restore the 'quick bookmark selection' bar on the right side (just to the right of the editor scrollbar).  The zorder is not restored properly.  You can switch tabs and back and this does restore the correct zorder.
+
+The assign and access methods are not saved when adding from the properties sheet.  Somewhere I made a change that affected this saving and have not corrected it...
