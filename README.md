@@ -105,6 +105,49 @@ These editors do support the adding/editing/deleting of properties.  The propert
 Alot of the functionality of Thor tool has also been incorporated into these editors.  Having the source code you are free to add more as needed.
 
 
+<b>Code Editor Tips/Features</b>
+
+<ul>
+<li>Current line is background highlighted.</li>
+<li>Block text selection supported; press the alt key while dragging with the cursor to select a column block.   Selected text can be copied as a block for insertion.</li>
+<li>There is tooltip help for commands (hover over a command to see the help text); F1 will open help with the selected text.</li>
+<li>Pasting code lines tries to automatically following the current indent; this is not always on target...</li>
+<li>Bookmark references are retained correctly when lines before it is deleted.</li>
+<li>On the right side a blue bar is displayed that represents bookmarks.  Hovering will show a tooltip of the line.  You can click on the blue bar to quickly navigate to the line.</li>
+<li>On the toolbar next to the bookmarks are two navigation buttons.  The left one will move back to the previous cursor position; the right one moves forward to position that you just moved back from.</li>
+<li>The code peek has a cookie crumb on the right to move between 'code peeks'.  To use right click on a method and then select 'Code Peek'.  This brings up a window over the code editor that displays the method.  Right-click on a method in the code-peek window and it will then display that method and now a series of red/yellow dots is displayed on the top-right corner of the code peek window.  Clicking allows movement between the different methods (tooltip text displays the method name).  Clicking back onto the main editor will auto-close the code peek window.  This is where a bug occurs in that the right bookmark display of the blue bars is not restored to the correct zorder.
+<li>You can customize the color selections and other features -- see the more toolbar button.</li>
+<li>The editor displays the matching IF-ENDIF and other blocks.  Put the cursor on one of the code blocks and it will highlight the matching code block.  Note that the CASE-ENDCASE is highlighted but not the CASE withing the code block.</li>
+<li>The matching will aide in displaying when you do not have a closing code block.  It will not display the matches.  For example, the ENDDO would not be highlighted below since the ENDIF is missing.</li>
+
+    DO WHILE .T.
+        IF m.variable != .T.
+    ENDDO
+
+<li>There is autocompletion of commands.  When you press enter after typing IF something=somethingelse, it will automatically add the ENDIF at the same indent level as the IF.  Same with SCAN, DO WHILE, DO CASE, FOR.</li>
+<li>The code block matching expects to the find ENDFOR and not LOOP as the end of a FOR loop.</li>
+<li>The Form editor will show a picklist of fields for the aliases defined in the data environment of the form; triggered by typing the alias name and then a period.</li>
+<li>A right-click menu is available on the Treeview display of the objects/methods that is context sensitive to the item clicked on.  DON'T TRY TO DELETE AN OBJECT FROM THE FORM/CLASS -- this will not save correctly.</li>
+<li>For ActiveX components the codesense does not get class specific PEMS; i.e., for treeview, it would not display a list of PEMs for oleTreeview.Row.(PEM List).</li>
+<li>You can copy methods and properties from other forms or classes (in the SCX and VCX editors) to the form/class being edited.  See buttons on toolbar.</li>
+<li>The VCX editor can open the entire VCX class library or just a single class in the library file.  Selecting the VCX class library will open the entire library; selecting the class opens just that class.</li>
+<li>If the VCX or SCX is in use somewhere else, the editor will still open it but just in read-only mode.</li>
+<li>There is a toolbar button to display non-declared variables on the toolbar; does a yellow background highlight of the variable.</li>
+<li>There is a toolbar button to display all occurrences of a selected phrase; does an off-green highlight of the selected phrase.</li>
+<li>Yellow change bars are displayed on the left for edited lines; cleared on save</li>
+<li>The save will be default first save the original files with a .bak extension added</li>
+<li>Errors on compile are shown in the bottom and you can double-click on a line to jump to it.</li>
+<li>The editor supports incremental search.  In the toolbar, there is a textbox - start typing text and it will jump to the first matching text.  Clicking on the search button next to it (one with green arrow) will jump to the next matching text.</li>
+<li>You can have your cursor on a word and press the 'Quick find text' toolbar button and it will jump to the next occurrence.</li>
+<li>There is a bug in the search/replace -- it does not skip the highlighted change (been annoyance but have not yet fixed).</li>
+<li>Macro functions are available for recording and playback for repeating keystrokes.</li>
+<li>The printing uses RTF format for output</li>
+<li>Right-clicking on a method tab displays a short-cut menu of choices;  you can revert back to original and you can compare to original version (as well as tab close options)</li>
+<li>The color toolbar button will insert the selected color as an RGB() expression</li>
+<li>Selecting an RGB() expression and then using the right-click menu you can display the color on screen</li>
+<li>There is a copy buffer on the right-click menu</li>
+</ul>
+
 <b>Known Issues</b>
 
 The visual class editor and form editor do not support deleting of objects nor the addition of objects.  I began coding a replacement for the visual layout editor but it has not been finished -- it will only display.  I use the standard VFP editors to do the layout and then switch to my editors for the coding.
