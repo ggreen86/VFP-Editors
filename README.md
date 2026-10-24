@@ -150,6 +150,4 @@ Alot of the functionality of Thor tool has also been incorporated into these edi
 
 <b>Known Issues</b>
 
-The visual class editor and form editor do not support deleting of objects nor the addition of objects.  I began coding a replacement for the visual layout editor but it has not been finished -- it will only display.  I use the standard VFP editors to do the layout and then switch to my editors for the coding.
-
-The assign and access methods are not saved when adding from the properties sheet.  Somewhere I made a change that affected this saving and have not corrected it...
+The visual class editor and form editor do not support the addition of objects (only in versions after 24Oct2026).  I began coding a replacement for the visual layout editor but it has not been finished -- it will only display.  I use the standard VFP editors to do the layout and then switch to my editors for the coding.
